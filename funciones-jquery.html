@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#colorRed').click(function(){
+                $('#otherRed').addClass('red');
+            })
+            $('#show').click(function(){
+                $('#image').slideToggle('fast');
+            })
+            $('#newParagraph').click(function(){
+                $('#new').append( document.createTextNode(' this is a new paragraph'));
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>AddClass</h1>
+        <p id='otherRed'>Click the button to add class 'red' to this paragraph</p>
+        <button id='colorRed'>AddClass</button>
+    </div>
+    <div>
+        <h1>Slidetoggle</h1>
+        <p>Click the button to slidetoggle a hidden image</p>        
+        <button id='show'>Slidetoggle</button>
+        <img id='image' src="image/jQuery.png" alt="an image">
+    </div>
+    <div>
+        <h1>Append</h1>
+        <p id='new'>Click the button to append a new paragraph:</p>
+        <button id='newParagraph'>Append</button>
+        
+    </div>
+</body>
+</html>
